@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <div class="maindiv">
+    <div class="head">
+        <div class="head1">
+            <img src="images/logo.png.jpg" class="logo">
+            <img src="images/Thank You.png" class="name"> 
+        </div>
+        <div class="head2">
+            <div class="home"><a href="Spine Home.html" class="home">Home</a></div>
+            <div class="company" onclick="toggleDropdown">Company
+              <span class="arrow">▼</span>
+              <div class="dropdown-content">
+                <div class="menu-grid">
+                   <a href="about.html">About Us</a>
+                   <a href="massage.html">Message from Managing Director</a>
+                   <a href="branch.html"> Our Branches</a>
+                   <a href="contact.html">Contact Us</a>
+                </div>
+              </div>
+            </div>
+            <div class="product" onclick="toggleDropdown">
+              Products Categories<span class="arrow">▼</span>
+                <div class="dropdown-content">
+                   <div class="menu-grid">
+                   <a href="hematology analyzer.html">Hematology Analyzer</a>
+                   <a href="hormone analyzer.html">Hormone Analyzer</a>
+                   <a href="biochemistey analyzer.html">Biochemistry Analyzer</a>
+                   <a href="device.html">Device Test kit</a>
+                   <a href="reagent.html">Reagent</a>
+                   <a href="usg.html">Ultrasonogram</a>
+                   <a href="xray.html">X-ray</a>
+                   <a href="urine analyzer.html">Urine Analyzer</a>
+                   <a href="microscope.html">Microscope</a>
+                   <a href="Electrolyte1.html">Electrolyte Analyzer</a>
+                   <a href="centrifuge.html">Centrifuge Machine</a>
+                   <a href="roller.html">Roller Mixer</a>
+                   <a href="others.html">others</a>
+                   </div>
+                </div>
+            </div>
+            <div class="contact"><a href="contact.html" class="contact"> Contact us</a></div>
+        </div>
+        <div class="head3">
+            <input type="text" id="search" onkeyup="showSuggestions()" name="search" placeholder="🔎 Search for products" class="search">
+            <div id="suggestions"></div>
+        </div>
+            <script>
+                let products = [
+                   { name: "Hormone Analyzer", link: "hormone analyzer.html" },
+                   { name: "X-Ray Machine", link: "xray.html" },
+                   { name: "Ultrasound Machine", link: "usg.html" },
+                   { name: "Biochemistry Analyzer", link: "biochemistey analyzer.html" },
+                   { name: "Hematology Analyzer", link: "hematology.html" },
+                   { name: "ESR Analyzer", link: "esr analyzer.html" },
+                   { name: "Urine Analyzer", link: "urine analyzer.html" },
+                   { name: "Electrolyte Analyzer", link: "Electrolyte1.html" },
+                   { name: "Microscope", link: "microscope.html" },
+                   { name: "Centrifuge", link: "centrifuge.html" },
+                   { name: "ECG", link: "ecg.html" },
+                   { name: "ROLLER", link: "roller.html" },
+                    ];
+                    let searchInput = document.getElementById("search");
+                    let suggestionBox = document.getElementById("suggestions");
+                    searchInput.addEventListener("keyup", function(e) {
+                    let input = searchInput.value.toLowerCase();
+                    suggestionBox.innerHTML = "";
+                    if (input === "") {
+                    suggestionBox.style.display = "none";
+                    return;
+                    }
+                    let found = false;
+                    products.forEach(product => {
+                    if (product.name.toLowerCase().includes(input)) {
+                    found = true;
+                    let div = document.createElement("div");
+                    div.textContent = product.name;
+
+                   div.onclick = function() {
+                   window.location.href = product.link;
+                   };
+                   suggestionBox.appendChild(div);
+                   }
+                   });
+                   suggestionBox.style.display = found ? "block" : "none";
+                   if (e.key === "Enter") {
+                   let exactMatch = products.find(product =>
+                   product.name.toLowerCase() === input
+                   );
+
+                   if (exactMatch) {
+                   window.location.href = exactMatch.link;
+                   }
+                   }
+
+                   });
+            </script>
+    </div><br>
+    <div class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.464031019885!2d90.40561367401823!3d23.730826578683814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b90066265413%3A0xd02d5fe35758b2a1!2sSpine%20Corporation!5e0!3m2!1sbn!2sbd!4v1771653060964!5m2!1sbn!2sbd" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div><br>
+    <div class="information">
+        <div class="form">
+            <form class="person" action="mailto:najminkonok02@gmail.com" method="post" enctype="text/plain">
+             <b style="text-align: center; margin-left: 110px; font-size: 25px;">
+             👉 ANY QUESTION?? 
+             </b><br><br>
+             <label>Name:</label><input type="text" name="name" placeholder="Your Name" class="name2" required><br><br>
+             <label>Email:</label><input type="email" name="email" placeholder="abc@gmail.com" class="name2" required><br><br>
+             <label>Cell Phone:</label><input type="text" name="phone" placeholder="0123456789" class="cell"><br><br>
+             <label>Send Message:</label><textarea name="message" placeholder="Write your query and complain here." class="write" rows="4" cols="30"></textarea><br><br>
+             <button type="submit" class="button">Send</button><br><br>
+            </form>
+        </div>
+        <div class="form">
+            <h3>Contact Information</h3>
+            <div class=form2>
+                <img src="images/location.png" class="icon">
+                23/3, Room-407, 4th Floor, Samart Bhaban,<br>Topkhana Road, Dhaka-1000.
+            </div><br><br>
+            <div>
+               <img src="images/phone.png" class="icon">
+                +880 1998-864462;<br>+880 1723-403265;
+            </div>  <br><br>  
+            <div>    
+                <img src="images/email.png" class="icon">
+                spinecorporation23@gmail.com
+            </div>    
+        </div>
+    </div><br><br>
+    <div class="footer">
+        <div class="footer1"> <b class="b1">About Us</b>
+            <p class="p1">Spine Corporation is an ISO Certified Medical Equipment Importer, Supplier, and service Provider Company founded in Dhaka in 2020. Our mission is to provide an exceptional range of high-quality products; both imported and locally manufactured, for the remarkable benefit of our valued customers.</p>
+        </div>
+        <div class="footer2"><p class="b2">Quick Link</p>
+            <ul class="list">
+                <a href="about.html"><li>About Us</li></a>
+                <a href="massage.html"><li>Message from Managing Director</li></a>
+                <a href="branch.html"><li>Our Branches</li></a>
+            </ul>
+        </div>
+        <div class="footer3"><p class="b2">Location</p>
+            <p class="p2">Purana Paltan, Dhaka 1000 <br>
+                Contact@spine_corporation.com <br>
+                +8801234567890, &nbsp;&nbsp; +8801234567890 <br>
+             </p>
+        </div>
+    </div>
+  </div>  
+</body>
+</html>

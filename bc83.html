@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="urine analyzer.css">
+    <title>Bionos 3 Part</title>
+</head>
+<body>
+    <div class="maindiv">
+    <div class="head">
+        <div class="head1">
+            <img src="images/logo.png.jpg" class="logo">
+           <img src="images/Thank You.png" class="name"> 
+        </div>
+        <div class="head2">
+            <div class="home"><a href="Spine Home.html" class="home">Home</a></div>
+            <div class="company" onclick="toggleDropdown">Company
+              <span class="arrow">▼</span>
+              <div class="dropdown-content">
+                <div class="menu-grid">
+                   <a href="about.html">About Us</a>
+                   <a href="massage.html">Message from Managing Director</a>
+                   <a href="branch.html"> Our Branches</a>
+                   <a href="contact.html">Contact Us</a>
+                </div>
+              </div>
+            </div>
+             <div class="product" onclick="toggleDropdown">
+              Products Categories<span class="arrow">▼</span>
+                <div class="dropdown-content">
+                   <div class="menu-grid">
+                   <a href="hematology analyzer.html">Hematology Analyzer</a>
+                   <a href="hormone analyzer.html">Hormone Analyzer</a>
+                   <a href="biochemistey analyzer.html">Biochemistry Analyzer</a>
+                   <a href="device.html">Device Test kit</a>
+                   <a href="reagent.html">Reagent</a>
+                   <a href="usg.html">Ultrasonogram</a>
+                   <a href="xray.html">X-ray</a>
+                   <a href="urine analyzer.html">Urine Analyzer</a>
+                   <a href="microscope.html">Microscope</a>
+                   <a href="Electrolyte1.html">Electrolyte Analyzer</a>
+                   <a href="centrifuge.html">Centrifuge Machine</a>
+                   <a href="roller.html">Roller Mixer</a>
+                   <a href="esr analyzer.html">ESR Analyzer</a>
+                   </div>
+                </div>
+            </div>
+            <div class="contact">Contact us</div>
+        </div> 
+        <div class="head3">
+             <input type="text" id="search" onkeyup="showSuggestions()" name="search" placeholder="🔎 Search for products" class="search">
+             <div id="suggestions"></div>
+            </div> 
+            <script>
+                let products = 
+                [
+                   { name: "Hormone Analyzer", link: "hormone analyzer.html" },
+                   { name: "X-Ray Machine", link: "xray.html" },
+                   { name: "Ultrasound Machine", link: "usg.html" },
+                   { name: "Biochemistry Analyzer", link: "biochemistey analyzer.html" },
+                   { name: "Hematology Analyzer", link: "hematology.html" },
+                   { name: "ESR Analyzer", link: "esr analyzer.html" },
+                   { name: "Urine Analyzer", link: "urine analyzer.html" },
+                   { name: "Electrolyte Analyzer", link: "Electrolyte1.html" },
+                   { name: "Microscope", link: "microscope.html" },
+                   { name: "Centrifuge", link: "centrifuge.html" },
+                   { name: "ECG", link: "ecg.html" },
+                   { name: "ROLLER", link: "roller.html" },
+                ];
+                    let searchInput = document.getElementById("search");
+                    let suggestionBox = document.getElementById("suggestions");
+                    searchInput.addEventListener("keyup", function(e) {
+                    let input = searchInput.value.toLowerCase();
+                    suggestionBox.innerHTML = "";
+                    if (input === "") {
+                    suggestionBox.style.display = "none";
+                    return;
+                    }
+                    let found = false;
+                    products.forEach(product => {
+                    if (product.name.toLowerCase().includes(input)) {
+                    found = true;
+                    let div = document.createElement("div");
+                    div.textContent = product.name;
+
+                   div.onclick = function() {
+                   window.location.href = product.link;
+                   };
+                   suggestionBox.appendChild(div);
+                   }
+                   });
+                   suggestionBox.style.display = found ? "block" : "none";
+                   if (e.key === "Enter") {
+                   let exactMatch = products.find(product =>
+                   product.name.toLowerCase() === input
+                   );
+
+                   if (exactMatch) {
+                   window.location.href = exactMatch.link;
+                   }
+                   }
+
+                   });
+            </script>
+    </div><br>
+    <div class="headline">Hematology Analyzer (3 part)
+    </div> <br> <br>
+    <div class="box">
+        <div class="box1">
+            <img src="images/bionos 83.jpeg" class="pic8">
+        </div>
+        <div class="box2">
+            <p class="p1">Model: BC 83+</p>
+            <p class="p2">Brand : Bionos</p>
+            <p class="p3">Origin: Spain & China joint venture</p>
+            <a href="images/Auto Hematology BC-83+.pdf" download>
+            <input type="button" name="catalog"class="catalog" value="Download Product Catalog">
+            </a> <br>
+            <p class="p4"> Product Features:</p>
+            <p class="p5">
+                <ul type="round">
+                    <li>Parameters: WBC, LYM#, LYM%, MID#, MID%, GRA#, GRA%, RBC,HGB, HCT, MCV, MCH, MCHC, PLT, RDW-CV, RDW-SD, MPV, PСТ, PDW, P-LCR, P-LCC, RBC histogram, WBC histogram, PLT histogram.</li>
+                    <li>Parameters: 21+3 Histograms, Test speed: 60T/H</li>
+                    <li>Calibration: Three types of calibration, Manual calibration, Auto calibration with calibrators and auto calibration using fresh sample</li>
+                    <li>Counting Channels: Two Channels- WBC & RBC</li>
+                    <li>Sample Volume: Whole blood 9.6µl, prediluted capillary blood 20µl.</li>
+                    <li>Data storage: Storing over 2,50,000 samples(histogram, patient information) combined search mode as per many conditions, com bined preview for output data.</li>
+                    <li>Print mode: Build-in printer, optional connection with every kinds of external</li>
+                    <li>printer. Display: 12-inch color LED touch screen monitor, supports external mouse and key-board Interface: USB-4, RS-232×1, Ethernet×1 </li>
+                </ul>
+            </p>
+        </div>    
+    </div> 
+    <div class="footer">
+        <div class="footer1"> <b class="b1">About Us</b>
+            <p class="p6">Spine Corporation is an ISO Certified Medical Equipment Importer, Supplier, and service Provider Company founded in Dhaka in 2020. Our mission is to provide an exceptional range of high-quality products; both imported and locally manufactured, for the remarkable benefit of our valued customers.</p>
+        </div>
+        <div class="footer2"><p class="b2">Quick Link</p>
+            <ul class="list">
+                <a href="about.html"><li>About Us</li></a>
+                <a href="massage.html"><li>Message from Managing Director</li></a>
+                <a href="branch.html"><li>Our Branches</li></a>
+            </ul>
+        </div>
+        <div class="footer3"><p class="b2">Location</p>
+            <p class="p7">Purana Paltan, Dhaka 1000 <br>
+                Contact@spine_corporation.com <br>
+                +8801234567890, &nbsp;&nbsp; +8801234567890 <br>
+             </p>
+        </div>
+    </div> 
+</body>
+</html>

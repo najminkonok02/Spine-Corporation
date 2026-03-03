@@ -1,0 +1,289 @@
+.maindiv{
+    width: 100%;
+    height:1000px;
+    background-color: white;
+}
+.head{
+    width: 100%;
+    height: 100px;
+    display:flex;
+    flex-direction: row;
+    margin-left: 10px;
+    position: sticky;
+    background-color: white;
+}
+.head1{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+.logo{
+     width: 70px;
+     height: 70px;
+     margin-top: 30px;
+}
+.name{
+    width: 120px;
+    height: 60px;
+    margin-top: 40px;
+}
+.head2{
+    width: 670px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    background-color: deepskyblue;
+    color: white;
+    font-weight: bold; 
+    margin-top: 30px;
+    border-radius: 10px;
+
+}
+.home{
+    width: 200px;
+    height:70px;
+    text-align: center;
+    margin:25px;
+    text-decoration:none;
+    color: black;
+}
+.home:hover{
+    color: black;
+}
+.company{
+    width: 200px;
+    height:70px;
+    margin:25px;
+    text-align: center;
+    text-decoration:none;
+    color: white;
+}
+.company:hover{
+    color: black;
+}
+.company:active{
+    color: rgb(0, 0, 0);
+}
+.product{
+    width: 250px;
+    height:70px;
+    margin:15px;
+    text-align: center;
+    text-decoration:none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 600px;          
+  max-height: 300px;    
+  background: #cfcece;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  z-index: 999;
+  padding: 10px;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 কলাম */
+  gap: 12px;
+}
+
+.menu-grid a {
+  padding: 10px 14px;
+  border: 1px solid #eee;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+}
+
+.menu-grid a:hover {
+  background: #f2f8ff;
+  color: #0a8fd8;
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background: #ddd;
+}
+
+.product:hover .dropdown-content {
+  display: block;
+}
+
+.contact{
+    width: 250px;
+    height:70px;
+    margin:22px;
+    text-align: center;
+    text-decoration:none;
+    color: white;
+}
+.contact:hover{
+    color: black;
+}
+.contact:active{
+    color: white;
+}
+.contact:visited{
+    color: black;
+}
+.head3{
+    width: 500px;
+    height: 70px;
+    display: flex;
+    flex-direction: row; 
+}
+.search{
+    width: 280px;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 40px;
+    margin-left: 15px;
+    background-color: rgb(233, 233, 233);
+}
+.search{
+    width: 280px;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 40px;
+    margin-left: 15px;
+    background-color: rgb(233, 233, 233);
+    position: relative;
+}
+#search{
+    width: 280px;
+}
+#suggestions{
+    position: absolute;
+    top: 100%;
+    width: 300px;
+    background: rgb(187, 187, 187);
+    border: 1px solid rgb(255, 255, 255);
+    border-top: none;
+    max-height:150px px;
+    overflow-y: auto;
+    z-index: 999;
+    margin-left: 60px;
+
+}
+#suggestions div {
+  cursor: all-scroll;
+}
+#suggestions div:hover {
+  background-color: #f2f2f2;
+}
+.headline{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(2, 141, 187);
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+.box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.box1{
+    width: 40%;
+    height: auto;
+}
+.pic8{
+    height: 400px;
+    width: 400px;
+    margin: 50px;
+}
+.box2{
+    width: 60%;
+    height: auto;
+}
+.p1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.p2{
+    font-size: 20px;
+    font-weight: bold;
+}
+.p3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.catalog{
+    height: 40px;
+    width: 200px;
+    background-color: rgb(52, 71, 241);
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    
+}
+.p4{
+    font-size: 30px;
+    font-weight: bold;
+}
+.p5{
+    text-align: justify;
+}
+.footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(2, 141, 187);
+    
+}
+.footer1{
+    width: 400px;
+    height: 300px;
+    margin-left: 40px;
+    margin-top: 30px; 
+    color: white; 
+}
+.b1{
+    font-size: 30px;
+}
+.p6{
+    text-align: justify;
+
+}
+.footer2{
+    width: 450px;
+    height: 300px;
+    margin-left: 50px;
+    margin-top: 5px; 
+    color: white; 
+}
+.b2{
+   font-size: 22px; 
+   font-style: unset;
+}
+.list{
+    line-height: 35px;
+}
+.footer3{
+    width: 450px;
+    height: 300px;
+    margin-left: 50px;
+    margin-top: 5px; 
+    color: white; 
+}
+.p7{
+    line-height: 35px;
+}
